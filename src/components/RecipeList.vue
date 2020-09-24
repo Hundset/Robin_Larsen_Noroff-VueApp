@@ -2,10 +2,10 @@
     <div class="row">
         <div v-for="recipe in recipes" :key="recipe.id" class="col-sm-12">
             <RecipeComponent
-                v-bind:thumbnail="recipe.thumbnail"
-                v-bind:recipeName="recipe.title"
-                v-bind:link="recipe.href"
-                v-bind:ingredients="recipe.ingredients">
+                v-bind:thumbnail="recipes.results.thumbnail"
+                v-bind:recipeName="recipes.results.title"
+                v-bind:link="recipes.href"
+                v-bind:ingredients="recipes.ingredients">
             </RecipeComponent>
         </div>
     </div>
