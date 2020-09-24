@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
-import RecipePage from './RecipeListPage.vue'
+import RecipeList from './components/RecipeList'
 
 Vue.use(VueRouter)
 
@@ -10,7 +10,7 @@ const router = new VueRouter({
     {
       path: '/',
       name: 'RecipeList',
-      component: RecipePage
+      component: RecipeList
     }
   ]
 })

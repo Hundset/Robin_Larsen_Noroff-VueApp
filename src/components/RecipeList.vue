@@ -1,9 +1,9 @@
 <template>
     <div class="row">
-        <div v-for="recipe in recipes" :key="recipe" class="col-sm-12">
+        <div v-for="recipe in recipes" :key="recipe.id" class="col-sm-12">
             <RecipeComponent
                 v-bind:thumbnail="recipe.thumbnail"
-                v-bind:title="recipe.title"
+                v-bind:recipeName="recipe.title"
                 v-bind:link="recipe.href"
                 v-bind:ingredients="recipe.ingredients">
             </RecipeComponent>
@@ -13,7 +13,7 @@
 
 <script>
 
-import RecipeComponent from './components/RecipeComp.vue'
+import RecipeComponent from './components/RecipeComponent.vue'
 export default {
     name: 'RecipeList',
     components: {

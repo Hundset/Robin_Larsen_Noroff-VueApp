@@ -5,7 +5,7 @@
                     <img :src="thumbnail"/>
                 </div>
                 <div class="[ card--info ]">
-                    <b>Recipe: </b>{{title}}
+                    <b>Recipe: </b>{{recipeName}}
                     <b>From: </b><a :href="link" target="_blank">Link</a>
                     <b>Ingredients: </b>{{ingredients}}
                 </div>
@@ -16,6 +16,6 @@
 <script>
 export default {
     name: 'RecipeComponent',
-    props: ['thumbnail', 'title', 'link', 'ingredients'],
+    props: ['thumbnail', 'recipeName', 'link', 'ingredients'],
 }
 </script>
