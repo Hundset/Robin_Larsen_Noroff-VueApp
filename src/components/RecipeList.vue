@@ -1,9 +1,9 @@
 <template>
-    <div class="row">
-        <div v-for="recipe in recipes" :key="recipe.id" class="col-sm-12">
+    <div>
+        <div v-for="recipes in recipes" :key="recipes.id">
             <RecipeComponent
-                v-bind:thumbnail="recipes.results.thumbnail"
-                v-bind:recipeName="recipes.results.title"
+                v-bind:thumbnail="recipes.thumbnail"
+                v-bind:recipeName="recipes.title"
                 v-bind:link="recipes.href"
                 v-bind:ingredients="recipes.ingredients">
             </RecipeComponent>
@@ -34,8 +34,22 @@ export default {
             return response.json();
         })
         .then(function(result) {
-            app.recipes = result;
+            app.recipes = result.results;
         })
     }
 }
 </script>
+
+<style scoped>
+
+    .recipe {
+        border: solid 1px orange;
+        border-radius: 16px;
+        padding: 5%;
+        margin: auto;
+        margin-top: 1%;
+        width: 50%;
+        font-family: sans-serif;
+    }
+
+</style>
