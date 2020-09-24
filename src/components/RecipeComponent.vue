@@ -6,7 +6,7 @@
              </div>
                 <div>
                 <b>Recipe: </b>{{recipeName}}<br />
-                <b>From: </b><a :href="link" target="_blank">Link</a><br />
+                <b>Source: </b><a :href="link" target="_blank">Link</a><br />
                 <b>Ingredients: </b>{{ingredients}}
             </div>
         </div>
