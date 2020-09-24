@@ -13,7 +13,7 @@
 
 <script>
 
-import RecipeComponent from './components/RecipeComponent.vue'
+import RecipeComponent from './RecipeComponent.vue'
 export default {
     name: 'RecipeList',
     components: {
